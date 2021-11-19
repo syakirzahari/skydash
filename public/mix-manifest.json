@@ -1,4 +1,8 @@
 {
     "/js/app.js": "/js/app.js",
-    "/css/app.css": "/css/app.css"
+    "/css/app.css": "/css/app.css",
+    "/fonts/feather/feather-webfont.eot": "/fonts/feather/feather-webfont.eot",
+    "/fonts/feather/feather-webfont.svg": "/fonts/feather/feather-webfont.svg",
+    "/fonts/feather/feather-webfont.ttf": "/fonts/feather/feather-webfont.ttf",
+    "/fonts/feather/feather-webfont.woff": "/fonts/feather/feather-webfont.woff"
 }

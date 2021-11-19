@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="stylesheet" href="vendors/feather/feather.css">
+    {{-- <link rel="stylesheet" href="vendors/feather/feather.css"> --}}
     <link rel="stylesheet" href="vendors/ti-icons/css/themify-icons.css">
     <link rel="stylesheet" href="vendors/css/vendor.bundle.base.css">
     <!-- endinject -->
@@ -22,6 +22,8 @@
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
+
+    <link href="{{ mix('css/app.css') }}" rel="stylesheet">
 </head>
 <body>
     <div id="app">
@@ -89,8 +91,11 @@
                 <!-- partial -->
                     @include('layouts.sidebar')
                 <!-- partial -->
-                    @yield('content')
-                </div>   
+                    <div class="content-wrapper">
+                        @yield('content')
+                    </div>               
+                </div>                        
+                @include('layouts.footer')
             </div>
         </main>
     </div>
