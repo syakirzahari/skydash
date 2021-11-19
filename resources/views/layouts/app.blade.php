@@ -22,16 +22,6 @@
     <link rel="stylesheet" href="css/vertical-layout-light/style.css">
     <!-- endinject -->
     <link rel="shortcut icon" href="images/favicon.png" />
-
-    <!-- Scripts -->
-    {{-- <script src="{{ asset('js/app.js') }}" defer></script> --}}
-
-    <!-- Fonts -->
-    {{-- <link rel="dns-prefetch" href="//fonts.gstatic.com"> --}}
-    {{-- <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet"> --}}
-
-    <!-- Styles -->
-    {{-- <link href="{{ asset('css/app.css') }}" rel="stylesheet"> --}}
 </head>
 <body>
     <div id="app">
@@ -90,7 +80,18 @@
         </nav> --}}
 
         <main>
-            @yield('content')
+            <div class="container-scroller">
+                @include('layouts.top-navbar')
+              <!-- partial -->
+                <div class="container-fluid page-body-wrapper">
+                <!-- partial:partials/_settings-panel.html -->
+                      @include('layouts.theme-setting')
+                <!-- partial -->
+                    @include('layouts.sidebar')
+                <!-- partial -->
+                    @yield('content')
+                </div>   
+            </div>
         </main>
     </div>
       <!-- plugins:js -->
